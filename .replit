@@ -1,0 +1,16 @@
+# Replit configuration
+run = "npm run dev"
+hidden = [".config", "package-lock.json"]
+modules = ["nodejs-20:v8-20230920-bd784b9"]
+
+[nix]
+channel = "stable-23_11"
+
+[deployment]
+build = ["npm", "run", "build"]
+run = ["npm", "run", "preview"]
+deploymentTarget = "static"
+
+[env]
+VITE_SUPABASE_URL = "$VITE_SUPABASE_URL"
+VITE_SUPABASE_ANON_KEY = "$VITE_SUPABASE_ANON_KEY"
